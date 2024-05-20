@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <?php require_once 'connect.php'; ?>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>onlyzenn homepage</title>
@@ -25,8 +26,8 @@
         <nav class="homepage">
             <section id="home">
             <h1>- Selamat Datang Di OnlyZenn -</h1>
-            <p>Halo Cliff disini
-            <p>Mahasiswa Universitas Sam Ratulangi Manado
+            <p>Halo <?php $row = mysqli_fetch_assoc($result); echo $row['name']; ?> disini
+            <p>Mahasiswa Universitas <?php echo $row['kampus']; ?> Manado
             <p>=============================================
             <p>Manusia biasa yang suka One Piece.
          </section>
